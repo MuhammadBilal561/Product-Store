@@ -45,7 +45,7 @@ const useProductStore = create((set) => ({
 
   updateProduct: async (id, updatedProduct) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/products/${id}`, {
+      const res = await fetch(`/api/products/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedProduct),

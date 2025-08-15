@@ -1,6 +1,8 @@
+export const dynamic = "force-dynamic";
+
 import { NextResponse } from "next/server";
-import connectDB from "../../../utils/db";
-import Product from "../../../models/productModel";
+import connectDB from "@/utils/db";
+import Product from "@/models/productModel";
 
 connectDB();
 
