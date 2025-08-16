@@ -26,9 +26,6 @@ Database: MongoDB (secure storage)
 
 Deployment: Vercel (live hosting)
 
-🌍 Live Website: [Your Vercel Link]
-💻 Source Code: [Your GitHub Link]
-
 This project taught me:
 
 How to connect a backend and frontend efficiently 🔗
