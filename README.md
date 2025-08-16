@@ -1,11 +1,11 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 
-🚀 Excited to launch my first Full-Stack Web Application! 🎉
+## 🚀 Excited to launch my first Full-Stack Web Application! 🎉
 I built and deployed this project using Next.js (frontend) + Node.js & Express.js (backend) + MongoDB (database), and hosted it live on Vercel 🌐.
 Source code is open for everyone on GitHub 📂.
 
-💡 What this application does:
+## 💡 What this application does:
 It’s an online product store where users can:
 
 🛒 Browse Products – See all available products in a clean, responsive layout.
@@ -16,7 +16,7 @@ It’s an online product store where users can:
 
 ⚡ Fast & Responsive – Works smoothly on mobile, tablet, and desktop.
 
-🛠 Tech Stack:
+## 🛠 Tech Stack:
 
 Frontend: Next.js + Tailwind CSS (for fast, responsive UI)
 
@@ -26,7 +26,7 @@ Database: MongoDB (secure storage)
 
 Deployment: Vercel (live hosting)
 
-This project taught me:
+## This project taught me:
 
 How to connect a backend and frontend efficiently 🔗
 
