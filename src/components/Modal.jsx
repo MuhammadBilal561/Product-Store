@@ -1,4 +1,3 @@
-// components/Modal.jsx
 "use client";
 import React from "react";
 
@@ -6,7 +5,9 @@ export default function Modal({ isOpen, onClose, children }) {
   return (
     <div
       className={`fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 transition-opacity ${
-        isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        isOpen
+          ? "opacity-100 pointer-events-auto"
+          : "opacity-0 pointer-events-none"
       }`}
     >
       <div

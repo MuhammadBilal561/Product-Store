@@ -17,8 +17,6 @@ const productSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
-
-// ✅ Fix: use mongoose.models to prevent re-compilation errors
 const Product =
   mongoose.models.Product || mongoose.model("Product", productSchema);
 

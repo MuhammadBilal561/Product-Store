@@ -1,9 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
-import Providers from "@/components/ui/providers"; 
+import Providers from "@/components/ui/providers";
 import Footer from "@/components/Footer";
-
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,8 +21,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className='dark'>
-            <head>
+    <html lang="en" className="dark">
+      <head>
         <link
           rel="icon"
           href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛍️</text></svg>"
@@ -31,12 +30,10 @@ export default function RootLayout({ children }) {
       </head>
 
       <body
-        className=  {`${geistSans.variable} ${geistMono.variable} antialiased  ` }
+        className={`${geistSans.variable} ${geistMono.variable} antialiased  `}
       >
         <Header />
-         <Providers>
-          {children}
-        </Providers>
+        <Providers>{children}</Providers>
         <Footer />
       </body>
     </html>

@@ -4,7 +4,7 @@ import ProductCard from "@/components/ProductCard";
 import useProductStore from "../store/product";
 import Modal from "@/components/Modal";
 import Toast from "@/components/Toast";
-import Loader from "@/components/Loader"; // 👈 Import your loader
+import Loader from "@/components/Loader";
 
 export default function HomePage() {
   const { products, fetchProducts, deleteProduct, updateProduct } =
@@ -12,7 +12,7 @@ export default function HomePage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingProduct, setEditingProduct] = useState(null);
   const [toast, setToast] = useState(null);
-  const [loading, setLoading] = useState(true); // 👈 loader state
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const loadProducts = async () => {
@@ -45,7 +45,7 @@ export default function HomePage() {
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900">
-        <Loader /> {/* 👈 Loader shows while fetching */}
+        <Loader />
       </div>
     );
   }

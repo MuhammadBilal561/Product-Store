@@ -1,4 +1,3 @@
-// frontend/utils/db.js
 import mongoose from "mongoose";
 
 let isConnected = false;
