@@ -4,6 +4,7 @@ import ProductCard from "@/components/ProductCard";
 import useProductStore from "../store/product";
 import Modal from "@/components/Modal";
 import Toast from "@/components/Toast";
+import Loader from "@/components/Loader"; // 👈 Import your loader
 
 export default function HomePage() {
   const { products, fetchProducts, deleteProduct, updateProduct } =
@@ -11,9 +12,15 @@ export default function HomePage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingProduct, setEditingProduct] = useState(null);
   const [toast, setToast] = useState(null);
+  const [loading, setLoading] = useState(true); // 👈 loader state
 
   useEffect(() => {
-    fetchProducts();
+    const loadProducts = async () => {
+      setLoading(true);
+      await fetchProducts();
+      setLoading(false);
+    };
+    loadProducts();
   }, []);
 
   const showToast = (message, type = "success") => setToast({ message, type });
@@ -34,6 +41,14 @@ export default function HomePage() {
     setIsModalOpen(false);
     showToast("Product updated successfully!", "success");
   };
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900">
+        <Loader /> {/* 👈 Loader shows while fetching */}
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 p-6 transition-colors duration-500">
